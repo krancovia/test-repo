@@ -1,6 +1,7 @@
 name: Slow CI
 
 on:
+  pull_request:
   merge_group:
 
 jobs:
