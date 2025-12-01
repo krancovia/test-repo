@@ -1,0 +1,22 @@
+name: Slow CI
+
+on:
+  merge_group:
+
+jobs:
+  slow-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Simulate slow build
+        run: |
+          echo "Starting slow build..."
+          sleep 300
+          echo "Build complete!"
+      
+      - name: Simulate slow tests
+        run: |
+          echo "Running slow tests..."
+          sleep 300
+          echo "Tests complete!"
