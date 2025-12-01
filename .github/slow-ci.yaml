@@ -1,6 +1,7 @@
 name: Slow CI
 
 on:
+  pull_request:
   merge_group:
 
 jobs:
@@ -12,11 +13,11 @@ jobs:
       - name: Simulate slow build
         run: |
           echo "Starting slow build..."
-          sleep 300
+          sleep 60
           echo "Build complete!"
       
       - name: Simulate slow tests
         run: |
           echo "Running slow tests..."
-          sleep 300
+          sleep 60
           echo "Tests complete!"
