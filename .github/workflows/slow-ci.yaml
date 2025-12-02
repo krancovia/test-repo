@@ -13,11 +13,12 @@ jobs:
       - name: Simulate slow build
         run: |
           echo "Starting slow build..."
-          true
+          false
+          # foo
           echo "Build complete!"
       
       - name: Simulate slow tests
         run: |
           echo "Running slow tests..."
-          true
+          false
           echo "Tests complete!"
